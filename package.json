@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "test": "cross-env TEST=true node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "keywords": [
     "estoque",
@@ -21,5 +22,9 @@
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.11.0",
     "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.4.2"
   }
 }
