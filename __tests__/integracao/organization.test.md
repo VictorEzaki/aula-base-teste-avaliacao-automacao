@@ -17,7 +17,7 @@ describe('Teste de integração de organização', () => {
     })
     
     afterAll(async () => {
-        transaction.rollback();
+        await transaction.rollback();
         await sequelize.db.close();
     });
 

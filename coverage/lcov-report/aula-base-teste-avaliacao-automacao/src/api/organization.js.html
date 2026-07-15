@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">8.69% </span>
+                <span class="strong">65.21% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/23</span>
+                <span class='fraction'>15/23</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">8.69% </span>
+                <span class="strong">65.21% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/23</span>
+                <span class='fraction'>15/23</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -118,34 +118,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,35 +167,35 @@
 &nbsp;
 class ApiOrganization {
 &nbsp;
-<span class="fstat-no" title="function not covered" >    as</span>ync FindById(req, res) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const { id } = <span class="cstat-no" title="statement not covered" >req.params</span>
-            const organization = <span class="cstat-no" title="statement not covered" >await serviceOrganization.FindById(id)</span>
+    async FindById(req, res) {
+        try {
+            const { id } = req.params
+            const organization = await serviceOrganization.FindById(id)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            res.status(200).send({ organization })</span>
+            res.status(200).send({ organization })
         } catch (error) {
 <span class="cstat-no" title="statement not covered" >            res.status(500).send({ msg: error.message })</span>
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    as</span>ync Create(req, res) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const { name, address, phone, email } = <span class="cstat-no" title="statement not covered" >req.body</span>
-            const organization = <span class="cstat-no" title="statement not covered" >await serviceOrganization.Create(name, address, phone, email)</span>
+    async Create(req, res) {
+        try {
+            const { name, address, phone, email } = req.body
+            const organization = await serviceOrganization.Create(name, address, phone, email)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            res.status(200).send({ organization })</span>
+            res.status(200).send({ organization })
         } catch (error) {
 <span class="cstat-no" title="statement not covered" >            res.status(500).send({ msg: error.message })</span>
         }
     }
     
-<span class="fstat-no" title="function not covered" >    as</span>ync Update(req, res) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const { id } = <span class="cstat-no" title="statement not covered" >req.params</span>
-            const { name, address, phone, email } = <span class="cstat-no" title="statement not covered" >req.body</span>
-            const organization = <span class="cstat-no" title="statement not covered" >await serviceOrganization.Update(id, name, address, phone, email)</span>
+    async Update(req, res) {
+        try {
+            const { id } = req.params
+            const { name, address, phone, email } = req.body
+            const organization = await serviceOrganization.Update(id, name, address, phone, email)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            res.status(200).send({ organization })</span>
+            res.status(200).send({ organization })
         } catch (error) {
 <span class="cstat-no" title="statement not covered" >            res.status(500).send({ msg: error.message })</span>
         }
@@ -220,7 +220,7 @@ module.exports = new ApiOrganization()</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-07-15T01:05:31.311Z
+                at 2026-07-15T19:44:59.470Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
