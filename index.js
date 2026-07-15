@@ -30,3 +30,5 @@ database.db
     .catch((e) => {
         console.error(`Não foi possivel conectar com o banco: ${e}`)
     })
+
+module.exports = app;
